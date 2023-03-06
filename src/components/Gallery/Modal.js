@@ -1,22 +1,23 @@
 import css from './Modal.module.css'
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { useEffect} from 'react';
 
 
-function Modal (props){
+function Modal ({ keyClose,onClickOverlay ,largeImg}){
+
 
   useEffect(()=>{
     window.addEventListener('keydown', e =>{
       if(e.code ==="Escape"){
-        this.props.keyClose();
+        keyClose()
       }
     })
-  },[])
+  },)
 
     return(
-      <div  onClick={props.onClickOverlay} className={css.overlay}>
+      <div  onClick={onClickOverlay} className={css.overlay}>
         <div className={css.modal}>
-          <img src={props.largeImg} alt="" />
+          <img src={largeImg} alt="" />
         </div>
       </div>
     )
