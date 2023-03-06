@@ -25,7 +25,6 @@ function Searchbar (props){
           <button type="submit" className={css.button}>
             <span className={css.buttonLabel}>Search</span>
           </button>
-
           <input
             className={css.input}
             type="text"
